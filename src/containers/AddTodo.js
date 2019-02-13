@@ -8,10 +8,14 @@ class AddTodo extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault();
     // first validate fields
-    this.props.form.validateFields((err, values) => {
-      if (!err) {
+    this.props.form.validateFields((errors, values) => {
+      if (!errors) {
         // if no errors dispatch add todo action
-        this.props.dispatch(addTodo(values.todo))
+        this.props.dispatch({
+          type: 'ADD_TODO',
+          id: new Date().getTime(),
+          text: values.todo,
+        });
         // reset form field values
         this.props.form.resetFields();
       }
@@ -43,6 +47,5 @@ class AddTodo extends React.Component {
 }
 
 const WrappedAddTodo = Form.create({ name: 'add_todo_form' })(AddTodo);
-
 export default connect()(WrappedAddTodo);
 

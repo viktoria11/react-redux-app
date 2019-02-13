@@ -1,19 +1,19 @@
 import React from 'react'
-import FilterLink from '../containers/FilterLink'
-import { VisibilityFilters } from '../actions'
-
+import FilterButton from '../containers/FilterButton'
+import { visibilityFilters } from '../actions'
+ 
 const Filters = () => (
   <div>
     <span>Filter: </span>
-    <FilterLink filter={VisibilityFilters.SHOW_ALL}>
+    <FilterButton filter="SHOW_ALL">
       All
-    </FilterLink>
-    <FilterLink filter={VisibilityFilters.SHOW_ACTIVE}>
+    </FilterButton>
+    <FilterButton filter="SHOW_ACTIVE">
       Active
-    </FilterLink>
-    <FilterLink filter={VisibilityFilters.SHOW_COMPLETED}>
+    </FilterButton>
+    <FilterButton filter="SHOW_COMPLETED">
       Completed
-    </FilterLink>
+    </FilterButton>
   </div>
 );
 
