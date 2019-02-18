@@ -8,7 +8,7 @@ const { Header } = Layout;
 export default () => (
   <Header className="header">
     <div className="logo">
-     Todos
+     Todos App
     </div>
     <Menu
       theme="dark"

@@ -1,6 +1,5 @@
 import React from 'react'
 import FilterButton from '../containers/FilterButton'
-import { visibilityFilters } from '../actions'
  
 const Filters = () => (
   <div>

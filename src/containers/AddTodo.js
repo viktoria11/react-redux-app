@@ -2,8 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Input, Button, Form, Row, Col } from 'antd';
 
-import { addTodo } from '../actions';
-
 class AddTodo extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault();
