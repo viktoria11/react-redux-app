@@ -3,7 +3,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { List } from 'antd';
 import TodoItem from '../components/TodoItem';
-import { visibilityFilters } from '../actions';
 import AddTodo from './AddTodo';
 
 const TodoList = (props) => {
